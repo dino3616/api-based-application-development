@@ -1,0 +1,12 @@
+name: api-based-application-development
+services:
+  app:
+    container_name: api-based-application-development-app
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile.development
+    volumes:
+      - type: bind
+        source: ../
+        target: /workspaces/api-based-application-development/
+    tty: true
